@@ -25,6 +25,7 @@ nav ul {
 
 .welcome {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
@@ -39,20 +40,48 @@ nav ul {
     font-size: 1.5rem;
 }
 
+.history {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
 .utility {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    column-gap: 10rem;
 }
 
 .overview {
     margin: 1rem;
 }
+
 .account {
     display: flex;
     align-items: center;
+    padding: 1rem;
     gap: 1rem;
 }
-.account img {
+
+.utility img {
     width: 4rem;
     border-radius: 10px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.operation {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.tool {
+    margin: 1rem;
 }

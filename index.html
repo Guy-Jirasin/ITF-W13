@@ -22,24 +22,65 @@
         </div>
     </div>
 
+    <div class="history">
+        <textarea name="history-area" id="history-area" disabled></textarea>
+    </div>
     <div class="utility">
         <div class="overview">
+            <h2>Account Overview</h2>
             <div class="account">
                 <img src="src/muscular.jpg" alt="profile-pic">
                 <div class="over-acc-r-t">
-                    <h2>Account Information</h2>
+                    <h3>Account Information</h3>
                     <p>What website?</p>
                 </div>
             </div>
             <div class="balance">
                 <img src="src/barchart.png" alt="balance-img">
                 <div class="balance-child">
-                    <h2>balance Information</h2>
+                    <h3>Balance Information</h3>
                     <p>Current Account balance: </p>
+                    <input type="number" id="curr-bal" name="curr-bal">
                     <p>Current Cash balance</p>
+                    <input type="number" id="curr-cash" name="curr-cash">
+                    <br>
+                    <button type="button">Change</button>
                 </div>
             </div>
             <div class="operation">
+                <img src="src/bank-oper.png" alt="bank-oper-pic">
+                <div class="operation-child">
+                    <h3>Bank Operation</h3>
+                    <select name="oper-type" id="oper-type">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdraw">Withdraw</option>
+                    </select>
+                    <br>
+                    <button type="button">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool">
+            <h2>Financial Tools</h2>
+            <div class="converter">
+                <img src="src/coins.png" alt="coins">
+                <div class="converter-child">
+                    <h3>Currency Converter</h3>
+                    <label>Input balance</label>
+                    <input type="number" id="converter-input" name="converter-input"> 
+                    <br>
+                    <label>Output balance</label>
+                    <input type="number" id="converter-output" name="converter-output">
+                    <br>
+                    <label>Input Currency</label>
+                    <select>
+                        <option value="usd">USD</option>
+                        <option value="thb">THB</option>
+                    </select>
+                    <br>
+                    <button type="button">Convert</button>
+                </div>
 
             </div>
         </div>
