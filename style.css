@@ -49,6 +49,7 @@ nav ul {
 
 .history textarea {
     width: 100%;
+    max-width: 60rem;
     height: 10rem;
     text-align: center;
 }
@@ -90,5 +91,9 @@ nav ul {
 }
 
 .tool {
+    margin: 1rem;
+}
+
+.converter {
     margin: 1rem;
 }
