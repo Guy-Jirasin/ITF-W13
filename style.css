@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+}
+
+nav {
+    background-color: rgb(81, 136, 238);
+    padding: 1em;
+}
+nav li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    font-size: 18px;
+    color: white;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.welcome img {
+    width: 10rem;
+    height: 100%;
+}
+
+.welcome-r-t {
+    font-size: 1.5rem;
+}
+
+.utility {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overview {
+    margin: 1rem;
+}
+.account {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.account img {
+    width: 4rem;
+    border-radius: 10px;
+}
