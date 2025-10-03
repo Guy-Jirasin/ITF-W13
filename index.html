@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>68070015-CurrencyConverter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="show_history()">
     <nav>
         <li>
             <ul>68070015</ul>
@@ -44,7 +45,7 @@
                     <p>Current Cash balance</p>
                     <input type="number" id="curr-cash" name="curr-cash">
                     <br>
-                    <button type="button">Change</button>
+                    <button onclick="check_update_show_value()">Change</button>
                 </div>
             </div>
             <div class="operation">
@@ -55,8 +56,9 @@
                         <option value="deposit">Deposit</option>
                         <option value="withdraw">Withdraw</option>
                     </select>
+                    <input type="number" id="oper-input" name="oper-input">
                     <br>
-                    <button type="button">Proceed</button>
+                    <button onclick="oper()">Proceed</button>
                 </div>
             </div>
         </div>
@@ -79,11 +81,12 @@
                         <option value="thb">THB</option>
                     </select>
                     <br>
-                    <button type="button">Convert</button>
+                    <button onclick="">Convert</button>
                 </div>
 
             </div>
         </div>
     </div>
+    
 </body>
 </html>
