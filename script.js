@@ -1,6 +1,6 @@
-const balance = [10000];
-const cash_arr = [10000];
-const history = ['1, Current account balance: 10000, Current cash balance: 10000'];
+const balance = [1000];
+const cash_arr = [1000];
+const history = ['1, Current account balance: 1000, Current cash balance: 1000'];
 
 function refresh_history(){
     update_history();
@@ -40,17 +40,30 @@ function oper(){
     let opertype = document.getElementById('oper-type').value;
     let val = Number(document.getElementById('oper-input').value);
     if (opertype === 'deposit'){
-        let bal_val = val;
-        let cash_val = cash_arr.at(-1) - val;
-        bal_val += balance.at(-1);
-        balance.push(bal_val);
-        cash_arr.push(cash_val);
+        if (cash_arr.at(-1) < val){
+            history.push('Couldn\'t deposit entered balance. (Insuffcient cash balance)');
+            document.getElementById('history-area').innerHTML += history.length + ', ' + history.at(-1) + '\n';
+        }
+        else{
+            let bal_val = val;
+            let cash_val = cash_arr.at(-1) - val;
+            bal_val += balance.at(-1);
+            balance.push(bal_val);
+            cash_arr.push(cash_val);
+            refresh_history();
+        }
     }
     else if (opertype === 'withdraw'){
-        let bal_val = balance.at(-1) - val;
-        let cash_val = cash_arr.at(-1) + val;
-        balance.push(bal_val);
-        cash_arr.push(cash_val);
+        if (balance.at(-1) < val){
+            history.push('Couldn\'t withdraw entered balance. (Insuffcient account balance)')
+            document.getElementById('history-area').innerHTML += history.length + ', ' + history.at(-1) + '\n';
+        }
+        else{
+            let bal_val = balance.at(-1) - val;
+            let cash_val = cash_arr.at(-1) + val;
+            balance.push(bal_val);
+            cash_arr.push(cash_val);
+            refresh_history();
+        }
     }
-    refresh_history();
 }
