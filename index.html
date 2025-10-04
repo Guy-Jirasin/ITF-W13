@@ -8,10 +8,10 @@
     <script src="script.js"></script>
 </head>
 <body onload="show_history()">
-    <nav>
+    <nav class="glass">
         <li>
             <ul>68070015</ul>
-            <ul>ITF Currency Converter</ul>
+            <ul>ITF Bank Dashboard</ul>
             <ul>Week14</ul>
         </li>
     </nav>
@@ -24,49 +24,50 @@
     </div>
 
     <div class="history">
-        <textarea name="history-area" id="history-area" disabled></textarea>
+        <textarea class="glass" name="history-area" id="history-area" disabled></textarea>
     </div>
+
     <div class="utility">
-        <div class="overview">
+        <div class="overview glass">
             <h2>Account Overview</h2>
-            <div class="account">
-                <img src="src/muscular.jpg" alt="profile-pic">
+            <div class="account glass">
+                <img src="src/account-information.png" alt="profile-pic">
                 <div class="over-acc-r-t">
                     <h3>Account Information</h3>
                     <p>What website?</p>
                 </div>
             </div>
-            <div class="balance">
-                <img src="src/barchart.png" alt="balance-img">
+            <div class="balance glass">
+                <img src="src/balance-information.png" alt="balance-img">
                 <div class="balance-child">
                     <h3>Balance Information</h3>
                     <p>Current Account balance: </p>
                     <input type="number" id="curr-bal" name="curr-bal">
                     <p>Current Cash balance</p>
                     <input type="number" id="curr-cash" name="curr-cash">
-                    <br>
-                    <button onclick="check_update_show_value()">Change</button>
+                    <button class='glass' onclick="check_update_show_value()">Change</button>
                 </div>
             </div>
-            <div class="operation">
-                <img src="src/bank-oper.png" alt="bank-oper-pic">
+            <div class="operation glass">
+                <img src="src/Bankoperation.png" alt="bank-oper-pic">
                 <div class="operation-child">
                     <h3>Bank Operation</h3>
-                    <select name="oper-type" id="oper-type">
-                        <option value="deposit">Deposit</option>
-                        <option value="withdraw">Withdraw</option>
-                    </select>
-                    <input type="number" id="oper-input" name="oper-input">
-                    <br>
-                    <button onclick="oper()">Proceed</button>
+                    <div class="opr-child-child">
+                        <select class='glass' name="oper-type" id="oper-type">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="oper-input" name="oper-input">
+                    </div>
+                    <button class='glass' onclick="oper()">Proceed</button>
                 </div>
             </div>
         </div>
 
-        <div class="tool">
+        <div class="tool glass">
             <h2>Financial Tools</h2>
             <div class="converter">
-                <img src="src/coins.png" alt="coins">
+                <img src="src/exchange.png" alt="coins">
                 <div class="converter-child">
                     <h3>Currency Converter</h3>
                     <label>Input balance</label>
@@ -76,12 +77,12 @@
                     <input type="number" id="converter-output" name="converter-output">
                     <br>
                     <label>Input Currency</label>
-                    <select>
+                    <select class="glass">
                         <option value="usd">USD</option>
                         <option value="thb">THB</option>
                     </select>
                     <br>
-                    <button onclick="">Convert</button>
+                    <button class='glass' onclick="">Convert</button>
                 </div>
 
             </div>
