@@ -3,6 +3,7 @@
     padding: 0;
     color: white;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .glass {
@@ -115,7 +116,7 @@ nav ul {
 }
 
 .overview {
-    width: 27xxrem;
+    width: 27rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -166,13 +167,13 @@ nav ul {
     flex-wrap: wrap;
     align-items: center;
 }
+
 .tool {
     width: 27rem;
     margin: 1rem;
 }
 
 .converter {
-    margin: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -207,4 +208,8 @@ button {
 
 .glass select {
     padding: 0.5rem;
+}
+
+.opr-child-child input {
+    max-width: 50%;
 }
